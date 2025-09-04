@@ -20,11 +20,11 @@ export const Article: FC<Props> = ({ article, size }) => {
         />
       </div>
       <div className="flex flex-col gap-y-2 text-left">
-        <p className="text-base text-grey-1">
+        <p className="text-base text-gray-1">
           {article.createdAt} · {article.readingTime} read
         </p>
-        <p className="text-md font-bold text-grey-5">{article.title}</p>
-        <p className="text-sm text-grey-3">{article.excerpt}</p>
+        <p className="text-md font-bold text-gray-5">{article.title}</p>
+        <p className="text-sm text-gray-3">{article.excerpt}</p>
       </div>
     </div>
   );

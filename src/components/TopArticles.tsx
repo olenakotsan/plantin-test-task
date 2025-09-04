@@ -1,17 +1,19 @@
 import React, { FC } from "react";
-import { articlesData } from "../const/blog";
 import { Article } from "./Article";
 import { Divider } from "./ui";
+import { Article as ArticleType } from "../types/blog";
 
-export const TopArticles: FC = () => {
-  const topArticles = articlesData.filter((i) => i.category === "top");
+type Props = {
+  articles: ArticleType[];
+};
 
+export const TopArticles: FC<Props> = ({ articles }) => {
   return (
     <section className="flex flex-col gap-y-4">
       <Divider />
-      <p className="text-grey-2 uppercase text-s font-bold text-left">Top</p>
+      <p className="text-gray-2 uppercase text-s font-bold text-left">Top</p>
       <div className="grid grid-cols-2 gap-8">
-        {topArticles.map((i) => (
+        {articles.map((i: ArticleType) => (
           <Article article={i} key={i.id} size="md" />
         ))}
       </div>

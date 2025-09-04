@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         white: "#FFFFFF",
         black: "#000000",
-        grey: {
+        red: "#ED685C",
+        gray: {
           0: "#E0E5EE",
           1: "#ADB8C8",
           2: "#91A0B6",
@@ -16,11 +17,12 @@ module.exports = {
           6: "#C4C4C4",
         },
         primary: {
-          hero: "#04BF9429",
-          text: "#04BF94",
+          light: "#04BF9429",
+          dark: "#04BF94",
         },
-        secondary: {
-          bg: "",
+        bg: {
+          light: "#CFEDE6",
+          dark: "#8CDECB",
         },
       },
       fontFamily: {
