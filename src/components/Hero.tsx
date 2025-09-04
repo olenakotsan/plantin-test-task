@@ -1,11 +1,18 @@
 import React, { FC, useState } from "react";
 import { SearchInput } from "./ui";
 import { getImageSrc } from "../utils";
+import { useWeather } from "../hooks/useWeather";
 
 export const Hero: FC = () => {
   const [search, setSearch] = useState("");
-
   const heroImageUrl = getImageSrc("/images/hero.svg");
+  const { temperature, loading, error } = useWeather();
+
+  const renderTemperature = () => {
+    if (loading) return "Loading weather...";
+    if (error) return "Weather currently unavailable";
+    return `${temperature}°C`;
+  };
 
   return (
     <section className="bg-primary-light rounded-2xl h-[267px]">
@@ -15,7 +22,7 @@ export const Hero: FC = () => {
             Stay always tuned with planting trends
           </h1>
           <p className="text-gray-5 font-bold text-m">
-            Current temperature is: 24°C
+            Current temperature is: {renderTemperature()}
           </p>
           <SearchInput
             value={search}
@@ -24,7 +31,11 @@ export const Hero: FC = () => {
           />
         </div>
         <div className="flex self-end mt-2">
-          <img src={heroImageUrl} alt="Hero" className="max-h-fit object-contain" />
+          <img
+            src={heroImageUrl}
+            alt="Hero"
+            className="max-h-fit object-contain"
+          />
         </div>
       </div>
     </section>
