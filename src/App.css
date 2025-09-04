@@ -21,3 +21,10 @@ body {
   text-align: center;
   padding: 2rem;
 }
+
+img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
