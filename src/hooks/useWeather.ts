@@ -16,7 +16,7 @@ export const useWeather = () => {
     useEffect(() => {
         const fetchWeather = async () => {
             try {
-                const response = await fetch('http://localhost:3001/weather');
+                const response = await fetch('https://plantin-test-task.vercel.app/api/weather');
                 if (!response.ok) throw new Error('Server error');
 
                 const data = await response.json();
