@@ -13,19 +13,20 @@ export const NewArticle: FC<Props> = ({ article }) => {
   return (
     <div className="flex flex-col gap-y-4">
       <Badge>New</Badge>
-      <div className="flex flex-row gap-x-8 h-[364px]">
-        <div className="w-1/2">
+      <div className="flex flex-row gap-8 md:gap-4  md:flex-col md:w-full min-h-364px cursor-pointer">
+        <div className="w-1/2 md:w-full">
           <img
             src={imgSrc}
             alt={article.title}
             className="h-full object-contain"
+            loading="lazy"
           />
         </div>
-        <div className="w-1/2 flex flex-col text-left">
+        <div className="w-1/2 md:w-full flex flex-col text-left">
           <p className="text-base text-gray-1 mb-2">
             {article.createdAt} · {article.readingTime} read
           </p>
-          <p className="text-xl font-bold text-gray-5 mb-4">{article.title}</p>
+          <p className="text-xl md:text-md font-bold text-gray-5 mb-4 md:mb-2">{article.title}</p>
           <p className="text-sm text-gray-3">{article.excerpt}</p>
         </div>
       </div>
