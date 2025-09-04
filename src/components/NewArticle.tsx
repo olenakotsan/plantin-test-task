@@ -13,12 +13,12 @@ export const NewArticle: FC<Props> = ({ article }) => {
   return (
     <div className="flex flex-col gap-y-4">
       <Badge>New</Badge>
-      <div className="flex flex-row gap-8 md:gap-4  md:flex-col md:w-full min-h-364px cursor-pointer">
+      <div className="flex flex-row gap-8 md:gap-4 md:flex-col md:w-full min-h-364px cursor-pointer items-center">
         <div className="w-1/2 md:w-full">
           <img
             src={imgSrc}
             alt={article.title}
-            className="h-full object-contain"
+            className="object-contain"
             loading="lazy"
           />
         </div>
