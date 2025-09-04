@@ -11,20 +11,24 @@ export const Article: FC<Props> = ({ article, size }) => {
   const imgSrc = getImageSrc(article.imageURL);
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div
+      className="flex flex-col gap-y-4 cursor-pointer"
+      onClick={() => {}}
+    >
       <div className="rounded-xl">
         <img
           src={imgSrc}
           alt={article.title}
-          className="object-contain"
+          className="object-contain md:w-full"
+          loading="lazy"
         />
       </div>
-      <div className="flex flex-col gap-y-2 text-left">
-        <p className="text-base text-grey-1">
+      <div className="flex flex-col gap-y-2 text-left pb-0.5">
+        <p className="text-base text-gray-1">
           {article.createdAt} · {article.readingTime} read
         </p>
-        <p className="text-md font-bold text-grey-5">{article.title}</p>
-        <p className="text-sm text-grey-3">{article.excerpt}</p>
+        <p className="text-md font-bold text-gray-5">{article.title}</p>
+        <p className="text-sm text-gray-3">{article.excerpt}</p>
       </div>
     </div>
   );

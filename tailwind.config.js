@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         white: "#FFFFFF",
         black: "#000000",
-        grey: {
+        red: "#ED685C",
+        gray: {
           0: "#E0E5EE",
           1: "#ADB8C8",
           2: "#91A0B6",
@@ -16,11 +17,12 @@ module.exports = {
           6: "#C4C4C4",
         },
         primary: {
-          hero: "#04BF9429",
-          text: "#04BF94",
+          light: "#04BF9429",
+          dark: "#04BF94",
         },
-        secondary: {
-          bg: "",
+        bg: {
+          light: "#CFEDE6",
+          dark: "#8CDECB",
         },
       },
       fontFamily: {
@@ -42,6 +44,33 @@ module.exports = {
         md: "24px",
         lg: "32px",
         xl: "48px",
+      },
+      spacing: {
+        "1px": "1px",
+        "4px": "4px",
+        "9px": "9px",
+      },
+      maxWidth: {
+        container: "1074px",
+        "522px": "522px",
+      },
+      height: {
+        "364px": "364px",
+        "267px": "267px",
+      },
+      width: {
+        "522px": "522px",
+      },
+      borderRadius: {
+        0.25: "0.25rem",
+      },
+      boxShadow: {
+        "bottom-border": "0 2px 0 0 rgb(209,213,219)",
+      },
+      screens: {
+        sm: { max: "375px" },
+        md: { max: "767px" },
+        lg: { max: "1074px" },
       },
     },
   },
